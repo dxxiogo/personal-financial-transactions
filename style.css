@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+
+#modal-background{
+    background-color: rgba(0, 0, 0, 0.616);
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#form-section, #form-update-transaction{
+    background-color: #2660a4;
+    min-height: 200px;
+    width: 500px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.322);
+}
+
+#form-update-transaction{
+    background-color: #4DA167;
+    
+}
+
+#form-update-transaction button {
+    background-color: #2660a4;
+}
+
+#form-update-transaction > h2 {
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+#form-section > form,#form-update-transaction > form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #fff;
+}
+
+form > input {
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+form > button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color: #ffff;
+    background-color: #4DA167;
+    cursor: pointer;
+    margin: 15px auto;
+}
+
+table, tr, th, td{
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+
+tr, th, td{
+    text-align: center;
+    min-width: 160px;
+    height: 35px;
+}
+
+#transactions div {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.actions button {
+    height: 25px;
+    border-radius: 7px;
+    padding: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+.update-btn {
+    background-color: #4DA167;
+}
+
+.remove-btn {
+    background-color: red;
+}

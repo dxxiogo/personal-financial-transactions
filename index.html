@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div id="modal-background">
+         <section id="form-update-transaction">
+                <h2>Atualizar Transação</h2>
+                <form action="  http://localhost:3000/transactions" method="post">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name-update">
+                    <label for="value">Valor:</label>
+                    <input type="text" id="value-update">
+                    <button id="add-transaction">Submeter</button>
+                </form>
+            </section>
+     </div>
+    <main>
+        <h1>TRANSAÇÕES FINANCEIRAS PESSOAIS</h1>
+        <section id="form-section">
+            <form action="  http://localhost:3000/transactions" method="post" id="add-transaction-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name">
+                <label for="value">Valor:</label>
+                <input type="text" id="value">
+                <button id="add-transaction">Submeter</button>
+            </form>
+        </section>
+        <section id="transactions">
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+            </table>
+            <div>
+                <p>Saldo Total:</p>
+                <p id="balance">R$00,00</p>
+            </div>
+        </section>
+    </main>
+    <script src="src/index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "personal-financial-transactions",
+  "version": "1.0.0",
+  "description": "Projeto do fim do módulo de JavaScript avançado utilizando HTML, CSS e JavaScript. Prática para fixação do conteúdo de Promises e requisições HTTP.",
+  "main": "index.js",
+  "scripts": {
+    "json-server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxxiogo/personal-financial-transactions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dxxiogo/personal-financial-transactions/issues"
+  },
+  "homepage": "https://github.com/dxxiogo/personal-financial-transactions#readme",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}
