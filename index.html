@@ -21,9 +21,9 @@
             </section>
      </div>
     <main>
-        <h1>TRANSAÇÕES FINANCEIRAS PESSOAIS</h1>
         <section id="form-section">
             <form action="  http://localhost:3000/transactions" method="post" id="add-transaction-form">
+                <h2>Nova Transação</h2>
                 <label for="name">Nome:</label>
                 <input type="text" id="name">
                 <label for="value">Valor:</label>
@@ -32,18 +32,20 @@
             </form>
         </section>
         <section id="transactions">
-            <table>
-                <tr>
-                    <th>Nome</th>
-                    <th>Data</th>
-                    <th>Valor</th>
-                    <th>Ações</th>
-                </tr>
-            </table>
             <div>
                 <p>Saldo Total:</p>
                 <p id="balance">R$00,00</p>
             </div>
+            <section class="table-section">
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </table>
+            </section>
         </section>
     </main>
     <script src="src/index.js" type="module"></script>
