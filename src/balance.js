@@ -7,9 +7,9 @@ export default async function calculateBalance () {
 
     const balanceText = document.querySelector('#balance');
     if(transactions.length !== 0){
-        balanceText.textContent = `R$${balance}`;
+        balanceText.textContent = `R$ ${balance}`;
     } else {
-        balanceText.textContent = `R$00.00`;
+        balanceText.textContent = `R$ 00.00`;
     }
 
 }

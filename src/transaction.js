@@ -20,7 +20,12 @@ function renderTransaction ({name, date, id, value}) {
     const newTr = document.createElement('tr');
     const transactionName = createElement('td', name,`name-${id}`);
     const dateTransaction = createElement('td', date);
-    const valueTransaction = createElement('td', `R$${value}`, `value-${id}`);
+    const valueTransaction = createElement('td', `R$ ${value}`, `value-${id}`);
+    if(Number(value) < 0) {
+        valueTransaction.classList.add('negative-balance');
+    } else {
+        valueTransaction.classList.add('positive-balance')
+    }
     const actions = createElement('td', '', '', 'actions');
     const deleteBtn = createElement('button', 'Excluir', id, 'remove-btn');
     deleteBtn.addEventListener('click', removeTransaction);
@@ -42,7 +47,7 @@ function updateTable ({name, value, id}){
     nameUpdate.textContent = name;
 
     const valueUpdate = document.querySelector(`#value-${id}`);
-    valueUpdate.textContent = `R$${value}`
+    valueUpdate.textContent = `R$ ${value}`
 }
 
 export{renderTransaction, updateTable}

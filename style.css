@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 main{
     display: flex;
     padding: 20px;
-    width: 100%;
+    max-width: 100%;
     gap: 15px;
     min-height: 100vh;
     background-color: #1d191e;
@@ -28,36 +31,40 @@ main{
 
 #form-section{
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     min-height: 200px;
-    width: 500px;
+    max-width: 500px;
     padding: 10px;
     border-radius: 15px;
 }
 
 #form-section > form {
-    position: fixed;
     background-color: #3a343c;
-    height: 400px;
+    height: 370px;
     padding: 20px;
-    top: 380px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.192);
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.37);
     color: #fff;
 }
 
 #form-update-transaction{
-    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    min-height: 280px;
     width: 500px;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.322);
 }
+#form-update-transaction input{
+    margin: 5px 0px;
+}
 
 #form-update-transaction{
-    background-color: #4DA167;
+    background-color: #3a343c;
     
 }
 
@@ -70,7 +77,7 @@ main{
 }
 
 #form-update-transaction > h2 {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    margin: 10px 0px;
     text-align: center;
 }
 
@@ -86,6 +93,7 @@ form > input {
     outline: none;
     border-radius: 10px;
     padding: 4px;
+    font-size: 16px;
 }
 
 form > button {
@@ -97,6 +105,11 @@ form > button {
     background-color: #4DA167;
     cursor: pointer;
     margin: 15px auto;
+}
+
+form > h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 
@@ -117,20 +130,26 @@ td {
 
 #transactions {
     padding-top: 50px;
-    width: 70rem;
+    max-width: 70rem;
     padding: 20px;
 }
 
 #transactions div {
-    padding: 10px;
+    padding: 20px;
+    border-radius: 5px;
     display: flex;
+    max-width: 950px;
     justify-content: space-between;
-    border: 1px solid black;
+    align-items: center;
+    background-color: #3a343c;
+    height: 60px;
+    color: #fff;
     margin-top: 20px;
+    font-weight: bold;
 }
 
 .table-section{
-    width: 60rem;
+    max-width: 60rem;
     padding: 20px;
     border-radius: 10px;
 }
@@ -139,8 +158,10 @@ td {
 .actions {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    max-width: 300px;
 }
 
 .actions button {
@@ -150,12 +171,29 @@ td {
     cursor: pointer;
 }
 .update-btn {
-    background-color: #4DA167;
-}
-
-.remove-btn {
-    color: #ff0000;
+    color: #4DA167 !important;
     font-weight: bold;
     background: none;
     border: none;
+}
+
+.remove-btn {
+    color: #e13737 !important;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+.negative-balance {
+    color: #e13737;
+}
+
+.positive-balance {
+    color: #4DA167;
+}
+
+@media (max-width: 1100px) {
+    main {
+        flex-direction: column;
+    }
 }
